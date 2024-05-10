@@ -1,0 +1,22 @@
+.border_blue{
+    border: 1px solid blue;
+}
+
+.border_red{
+    border: 1px solid red;
+}
+
+.flex-Center{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.icon{
+    height: 23px;
+    
+}
+
+.max_w{
+    min-width: auto;
+}
