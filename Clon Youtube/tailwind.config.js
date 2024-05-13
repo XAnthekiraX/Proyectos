@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/*.{html,js}"],
   theme: {
     extend: {
+      display: ['responsive', 'hover', 'focus'],
+      width: ['responsive', 'hover', 'focus'],
+      height: ['responsive', 'hover', 'focus'],
       colors: {
         'alto': {
           '50': '#f7f7f7',

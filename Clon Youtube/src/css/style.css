@@ -4,14 +4,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-.border_blue {
-  border: 1px solid blue;
-}
-
-.border_red {
-  border: 1px solid red;
-}
-
 .flex-Center {
   display: flex;
   justify-content: center;
@@ -22,21 +14,46 @@
   height: 23px;
 }
 
-.max_w {
-  min-width: auto;
+.cambio {
+  color: blue;
+  &.active {
+    color: red;
+  }
 }
 
-.cambio{
-    color: blue;
-    &.active{
-        color:red;
-    }
+.swiper-button-prev {
+  transition: 2s;
+  &.active {
+    opacity: 1;
+    box-shadow: 15px 0px 20px 15px white;
+  }
 }
 
-#scroll{
+.swiper-button-next {
+  transition: 2s;
+  &.active {
+    opacity: 1;
+    box-shadow: -15px 0px 20px 15px white;
+  }
+}
+
+#contenido {
+  max-width: 83%;
+  min-width: 70rem;
+}
+
+#scroll {
   scrollbar-color: white white;
 
-  &:hover{
+  &:hover {
     scrollbar-color: #909090 white;
   }
+}
+
+#points:hover {
+  opacity: 1;
+}
+
+#search input:focus + #search input{
+  width: 120px;
 }
