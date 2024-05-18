@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily:{
+        'Roboto':['Roboto', 'sans-serif']
+      },
       display: ['responsive', 'hover', 'focus'],
       width: ['responsive', 'hover', 'focus'],
       height: ['responsive', 'hover', 'focus'],

@@ -2,48 +2,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function imprimirHTML() {
         // Seleccionar el elemento donde se agregará el HTML repetido
-        const contenedor = document.getElementById('contenido');
+        const contenedor = document.getElementById('video');
 
         // HTML que quieres imprimir repetidamente
         const html = `
-
-        <div id="videos" class="h-auto w-72 m-2 mt-5 grow ">
-            <div id="sup"
-                class="overflow-hidden rounded h-auto ">
-                <img class="h-auto rounded-lg"
-                    src="./images/Youtube.jpg">
-            </div>
-            <div id="inf" class="h-auto flex mt-3  pb-3">
-                <div id="img" class="w-2/12 ml-2">
-                    <img class="h-8 w-8"
-                        src="./images/perfil.png" alt
-                        id="profile">
+            <div id="videos" class="h-auto sm:w-[290px] xl:w-[290px] m-2 mt-5 grow 2xl:w-[15%]">
+                <div id="sup"
+                    class="overflow-hidden rounded h-auto ">
+                    <img class="h-auto rounded-lg"
+                        src="./images/Youtube.jpg">
                 </div>
-                <div id="info" class="ml-3 flex flex-col 8/12">
-                    <strong id="titulo"
-                        class="font-bold text-base"></strong>
-                    <span id="canal"
-                        class="text-alto-600 text-sm mt-1"></span>
-                    <div class="flex text-xs">
-                        <span id="visualize"></span>
-                        <div
-                            class="h-1 w-1 rounded-full bg-alto-800"></div>
-                        <span id="time"></span>
+                <div id="inf" class="h-auto flex mt-3  pb-3">
+                    <div id="img" class="w-2/12 ml-2">
+                        <img class="h-8 w-8"
+                            src="./images/perfil.png" alt
+                            id="profile">
+                    </div>
+                    <div id="info" class="ml-3 flex flex-col 8/12">
+                        <strong id="titulo"
+                            class="font-bold text-base"></strong>
+                        <span id="canal"
+                            class="text-alto-600 text-sm mt-1"></span>
+                        <div class="flex text-xs">
+                            <span id="visualize" class="text-alto-600"></span>
+                            <div
+                                class="h-1 w-1 rounded-full bg-alto-800"></div>
+                            <span id="time" class="text-alto-600"></span>
+                        </div>
+                    </div>
+                    <div id="points" class="w-1/12">
+                        <i
+                            class="fa-solid fa-ellipsis-vertical opacity-0"></i>
                     </div>
                 </div>
-                <div id="points" class="w-1/12">
-                    <i
-                        class="fa-solid fa-ellipsis-vertical opacity-0"></i>
-                </div>
-            </div>
-        </div>
-
-                        
+            </div>   
         `;
 
 
         // Bucle para agregar el HTML al contenedor 50 veces
-        for (let i = 0; i < 68; i++) {
+        for (let i = 0; i < 59; i++) {
             contenedor.innerHTML += html;
         }
     }
@@ -96,11 +93,19 @@ document.addEventListener('DOMContentLoaded', function () {
                     const divCanal = document.getElementById(`canal${index + 1}`);
                     const divVisualize = document.getElementById(`visualize${index + 1}`);
                     const divTime = document.getElementById(`time${index + 1}`);
-
-                    divTitulo.textContent = titulo;
-                    divCanal.textContent = canales[index];
-                    divVisualize.textContent = visualizaciones[index];
-                    divTime.textContent = fechas[index];
+                
+                    if (divTitulo) {
+                        divTitulo.textContent = titulo;
+                    }
+                    if (divCanal) {
+                        divCanal.textContent = canales[index];
+                    }
+                    if (divVisualize) {
+                        divVisualize.textContent = visualizaciones[index];
+                    }
+                    if (divTime) {
+                        divTime.textContent = fechas[index];
+                    }
                 });
             });
     }
