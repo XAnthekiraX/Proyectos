@@ -1,7 +1,7 @@
-import * as funciones from './funciones'; // Asegúrate de que esto se importe correctamente
+
 
 $(document).ready(function () {
-
+    // Llamar a la función more_subs del módulo importado
     // Agregar clases a elementos
     $(".scr-modulos").addClass("h-auto p-2 pl-4 flex flex-wrap justify-start items-start rounded-lg w-full hover:bg-alto-200");
     $(".txt-moduls").addClass("mr-3");
@@ -49,12 +49,7 @@ $(document).ready(function () {
         $('#points').addClass('opacity-0').removeClass('opacity-100');
     });
 
-    // Llamar a la función more_subs del módulo importado
-    if (typeof funciones.more_subs === 'function') {
-        funciones.more_subs();
-    } else {
-        console.error('funciones.more_subs is not a function');
-    }
+    
 });
 
 
